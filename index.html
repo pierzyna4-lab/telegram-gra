@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra Clicker</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            text-align: center; 
+            background-color: #f0f0f0; 
+            margin: 0; 
+            padding: 20px; 
+        }
+        #game-area {
+            padding: 50px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        button {
+            font-size: 24px;
+            padding: 20px 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-area">
+        <h1>Gra Clicker!</h1>
+        <p>Kliknięcia: <span id="score">0</span></p>
+        <button id="click-button">Kliknij mnie!</button>
+    </div>
+
+    <script>
+        // Pobieramy elementy z naszej strony
+        const clickButton = document.getElementById('click-button');
+        const scoreDisplay = document.getElementById('score');
+
+        let score = 0;
+
+        // Co się stanie, gdy przycisk zostanie kliknięty
+        clickButton.onclick = function() {
+            score = score + 1; // Zwiększ wynik o 1
+            scoreDisplay.innerText = score; // Pokaż nowy wynik na stronie
+        };
+    </script>
+</body>
+</html>
